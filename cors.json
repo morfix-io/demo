@@ -1,0 +1,8 @@
+[
+  {
+    "origin": ["https://morfix.io", "https://logic.morfix.io", "https://iam.morfix.io", "https://engine.morfix.io"],
+    "method": ["*"],
+    "responseHeader": ["*"],
+    "maxAgeSeconds": 3600
+  }
+]

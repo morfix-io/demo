@@ -1,0 +1,92 @@
+{
+  "name": "website-frontend",
+  "copyright": "Copyright © 2020 Morfix, Inc. All rights reserved.",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@axetroy/react-download": "^1.1.1",
+    "@material-ui/core": "4.12.4",
+    "@material-ui/icons": "4.11.3",
+    "@sentry/browser": "7.33.0",
+    "axios": "1.2.5",
+    "clipboard-copy": "^4.0.1",
+    "clsx": "1.2.1",
+    "connected-react-router": "6.9.3",
+    "history": "4.10.1",
+    "node-sass": "8.0.0",
+    "node-seal": "^5.1.1",
+    "prop-types": "^15.8.1",
+    "query-string": "7.1.1",
+    "react": "16.13.1",
+    "react-beautiful-dnd": "13.1.1",
+    "react-dom": "16.13.1",
+    "react-gtm-module": "2.0.11",
+    "react-helmet-async": "^1.3.0",
+    "react-intl": "5.24.6",
+    "react-redux": "7.2.6",
+    "react-router": "5.1.2",
+    "react-router-dom": "5.1.2",
+    "react-scripts": "5.0.1",
+    "react-syntax-highlighter": "15.5.0",
+    "redux": "4.2.0",
+    "redux-logger": "^3.0.6",
+    "redux-saga": "1.2.2",
+    "reselect": "^4.1.7",
+    "shortid": "2.2.16",
+    "typeface-rubik": "^1.1.13",
+    "uuid": "9.0.0"
+  },
+  "scripts": {
+    "start:dev": "env-cmd -f .env.development react-app-rewired start",
+    "start:prod": "env-cmd -f .env react-app-rewired start",
+    "build": "rm -rf build/* && react-app-rewired build",
+    "postbuild": "react-snap",
+    "serve": "http-server build",
+    "sitemap": "node ./scripts/sitemap.js",
+    "sync": "yarn build && yarn sitemap && gsutil -m rsync -R build gs://morfix.io",
+    "test": "react-app-rewired test",
+    "eject": "react-scripts eject"
+  },
+  "reactSnap": {
+    "crawl": false,
+    "inlineCss": false,
+    "include": [
+      "/",
+      "/sandbox"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version",
+      "last 1 edge version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "7.20.12",
+    "@babel/preset-env": "7.20.2",
+    "babel-loader": "8.1.0",
+    "customize-cra": "1.0.0",
+    "env-cmd": "^10.1.0",
+    "eslint": "^8.32.0",
+    "eslint-config-prettier": "8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "7.32.1",
+    "http-server": "^14.1.1",
+
+    "prettier": "2.8.3",
+    "react-app-rewired": "2.2.1",
+    "react-snap": "^1.23.0",
+    "sitemap": "7.1.1",
+    "worker-loader": "^3.0.8"
+  }
+}
