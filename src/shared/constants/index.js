@@ -1,5 +1,3 @@
-import config from 'config'
-
 /**
  * Error status codes
  * @type {{CONFLICT: number, INTERNAL_SERVER: number, LOCKED: number, UNAUTHORIZED: number, BAD_REQUEST: number, INVALID_TOKEN: number, NOT_FOUND: number, FORBIDDEN: number}}
@@ -181,37 +179,6 @@ export const ACTION_STATUS = {
   SUCCESS: 'Success',
   FAILURE: 'Failure',
   UNKNOWN: 'Unknown'
-}
-
-export const REDIRECTS = {
-  PROJECTS: 'projects',
-  APIS: 'apis',
-  LOGIN: 'login',
-  REGISTER: 'register',
-  CREATE_NEW_API: 'create new api'
-}
-
-export const validRedirects = {
-  [REDIRECTS.PROJECTS]: `${config.ROUTES.BASE}/${config.ROUTES.DASH}/${config.ROUTES.PROJECTS}`,
-  [REDIRECTS.APIS]: `${config.ROUTES.BASE}/${config.ROUTES.DASH}/${config.ROUTES.APIS}`,
-  [REDIRECTS.LOGIN]: `${config.ROUTES.BASE}/${config.ROUTES.AUTH}/${config.ROUTES.LOGIN}`,
-  [REDIRECTS.REGISTER]: `${config.ROUTES.BASE}/${config.ROUTES.AUTH}/${config.ROUTES.REGISTER}`,
-  [REDIRECTS.CREATE_NEW_API]: `${config.ROUTES.BASE}/${config.ROUTES.DASH}/${config.ROUTES.APIS}/${config.ROUTES.NEW}`
-}
-
-export const loginRedirect = path => {
-  return `${getValidRedirect(REDIRECTS.LOGIN)}/?redirect=${path}`
-}
-
-export const registerRedirect = path => {
-  return `${getValidRedirect(REDIRECTS.REGISTER)}/?redirect=${path}`
-}
-
-export const getValidRedirect = path => {
-  if (Object.prototype.hasOwnProperty.call(validRedirects, path)) {
-    return validRedirects[path]
-  }
-  return validRedirects[REDIRECTS.PROJECTS]
 }
 
 export const KEY_TYPES = {

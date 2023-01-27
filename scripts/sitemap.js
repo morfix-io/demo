@@ -15,36 +15,6 @@ smStream.write({
   changefreq: 'always',
   priority: 0.8
 })
-smStream.write({
-  url: '/product',
-  changefreq: 'always',
-  priority: 0.8
-})
-smStream.write({
-  url: '/pricing',
-  changefreq: 'always',
-  priority: 0.6
-})
-smStream.write({
-  url: '/sandbox',
-  changefreq: 'always',
-  priority: 0.7
-})
-smStream.write({
-  url: '/auth/login',
-  changefreq: 'always',
-  priority: 0.4
-})
-smStream.write({
-  url: '/auth/logout',
-  changefreq: 'always',
-  priority: 0.1
-})
-smStream.write({
-  url: '/auth/register',
-  changefreq: 'always',
-  priority: 0.5
-})
 
 // indicate there is nothing left to write
 smStream.end()
