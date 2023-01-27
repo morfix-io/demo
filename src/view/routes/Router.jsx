@@ -1,10 +1,9 @@
 import React, { Suspense } from 'react'
 import PropTypes from 'prop-types'
 import { ConnectedRouter } from 'connected-react-router'
-import { Route, Switch, Redirect } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import MainLoader from 'view/common/MainLoader'
-import { unauthenticatedRoutes, errorRoutes } from '../routes'
-import config from 'config'
+import { unauthenticatedRoutes } from '../routes'
 
 const Router = props => {
   const { history } = props
@@ -12,13 +11,7 @@ const Router = props => {
     <Suspense fallback={<MainLoader />}>
       <ConnectedRouter history={history}>
         <Switch>
-          {/*Auto attempt to redirect to the sandbox */}
-          <Redirect exact from={`/`} to={unauthenticatedRoutes.SANDBOX.path} />
-          <Redirect exact from={`${config.ROUTES.BASE}/`} to={unauthenticatedRoutes.SANDBOX.path} />
-          {/* Unauth routes */}
-          <Route path={unauthenticatedRoutes.SANDBOX.path} exact component={unauthenticatedRoutes.SANDBOX.component} />
-          {/* If no route is matched, show 404 */}
-          <Route component={errorRoutes.PAGE404.component} />
+          <Route path={unauthenticatedRoutes.HOME.path} exact component={unauthenticatedRoutes.HOME.component} />
         </Switch>
       </ConnectedRouter>
     </Suspense>

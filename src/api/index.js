@@ -1,4 +1,3 @@
-import { createRestApi } from './rest'
 import { createWorkerApi } from './worker'
 
 /**
@@ -9,7 +8,6 @@ import { createWorkerApi } from './worker'
  */
 const initApiLayer = () => {
   return {
-    rest: createRestApi(),
     worker: createWorkerApi()
   }
 }

@@ -63,7 +63,7 @@ const TopBar = () => {
                     disableFocusRipple={true}
                     disableRipple={true}
                     component={Link}
-                    to={`${config.ROUTES.BASE}/${config.ROUTES.SANDBOX}`}
+                    to={`${config.ROUTES.HOME}`}
                   >
                     <Typography id={'LINK-home-text'} variant="h4" component="h1" display="block">
                       MORFIX
@@ -77,7 +77,7 @@ const TopBar = () => {
                     aria-label="Morfix-icon"
                     className={classes.iconButton}
                     component={Link}
-                    to={`${config.ROUTES.BASE}/${config.ROUTES.SANDBOX}`}
+                    to={`${config.ROUTES.HOME}`}
                   >
                     <IconWhite className={classes.icon} />
                   </IconButton>
