@@ -40,10 +40,9 @@
     "start:dev": "env-cmd -f .env.development react-app-rewired start",
     "start:prod": "env-cmd -f .env react-app-rewired start",
     "build": "rm -rf build/* && react-app-rewired build",
-    "postbuild": "react-snap",
+    "postbuild": "yarn sitemap",
     "serve": "http-server build",
     "sitemap": "node ./scripts/sitemap.js",
-    "sync": "yarn build && yarn sitemap && gsutil -m rsync -R build gs://morfix.io",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject"
   },
