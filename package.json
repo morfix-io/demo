@@ -3,6 +3,7 @@
   "copyright": "Copyright © 2020 Morfix, Inc. All rights reserved.",
   "version": "1.0.0",
   "private": true,
+  "homepage": "/seal-sandbox",
   "dependencies": {
     "@axetroy/react-download": "^1.1.1",
     "@material-ui/core": "4.12.4",
@@ -50,7 +51,8 @@
     "inlineCss": false,
     "include": [
       "/",
-      "/sandbox"
+      "/seal-sandbox",
+      "/seal-sandbox/sandbox"
     ]
   },
   "eslintConfig": {
