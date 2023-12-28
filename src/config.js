@@ -1,7 +1,7 @@
 const { NODE_ENV, REACT_APP_MORFIX_FRONTEND_HOST, REACT_APP_SENTRY_DSN, REACT_APP_GTM_ID } = process.env
 const config = {
   NODE_ENV,
-  FRONTEND_HOST: REACT_APP_MORFIX_FRONTEND_HOST || 'https://morfix.io',
+  FRONTEND_HOST: REACT_APP_MORFIX_FRONTEND_HOST || 'https://s0l0ist.github.io/seal-sandbox',
   ROUTES: {
     HOME: ''
   },
