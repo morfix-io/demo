@@ -1,6 +1,6 @@
 [
   {
-    "origin": ["https://morfix.io", "https://logic.morfix.io", "https://iam.morfix.io", "https://engine.morfix.io"],
+    "origin": ["https://s0l0ist.github.io/seal-sandbox"],
     "method": ["*"],
     "responseHeader": ["*"],
     "maxAgeSeconds": 3600

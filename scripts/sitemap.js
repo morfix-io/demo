@@ -1,6 +1,6 @@
 const { writeFileSync } = require('fs')
 const { SitemapStream, streamToPromise } = require('sitemap')
-const smStream = new SitemapStream({ hostname: 'https://morfix.io' })
+const smStream = new SitemapStream({ hostname: 'https://s0l0ist.github.io/seal-sandbox' })
 
 // coalesce stream to value
 // alternatively you can pipe to another stream
